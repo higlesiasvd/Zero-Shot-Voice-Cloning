@@ -1,0 +1,105 @@
+{
+  "reference_audio": "audio_samples/reference.wav",
+  "models": [
+    {
+      "model": "XTTS-v2",
+      "description": "Zero-shot voice cloning",
+      "tests": [
+        {
+          "test_id": 1,
+          "text": "Hello, this is a demonstration of zero-shot voice cloning technology.",
+          "output_file": "results/xtts_output_1.wav",
+          "generation_time": 9.95400094985962,
+          "voice_similarity": 0.808257520198822,
+          "quality_metrics": {
+            "duration": 5.43,
+            "rms_energy": 0.14814218878746033,
+            "zero_crossing_rate": 0.09914790134803922
+          }
+        },
+        {
+          "test_id": 2,
+          "text": "Artificial intelligence can now replicate human voices with remarkable accuracy.",
+          "output_file": "results/xtts_output_2.wav",
+          "generation_time": 11.485215902328491,
+          "voice_similarity": 0.8698578476905823,
+          "quality_metrics": {
+            "duration": 6.443333333333333,
+            "rms_energy": 0.1590503454208374,
+            "zero_crossing_rate": 0.09697459003712872
+          }
+        },
+        {
+          "test_id": 3,
+          "text": "This synthesized speech should sound similar to the reference audio provided.",
+          "output_file": "results/xtts_output_3.wav",
+          "generation_time": 5.894291400909424,
+          "voice_similarity": 0.8309037685394287,
+          "quality_metrics": {
+            "duration": 4.224666666666667,
+            "rms_energy": 0.1771102398633957,
+            "zero_crossing_rate": 0.13802165122487436
+          }
+        }
+      ],
+      "statistics": {
+        "avg_similarity": 0.8363397121429443,
+        "std_similarity": 0.025440285623638745,
+        "min_similarity": 0.808257520198822,
+        "max_similarity": 0.8698578476905823,
+        "avg_generation_time": 9.111169417699179,
+        "total_time": 27.333508253097534
+      }
+    },
+    {
+      "model": "VITS",
+      "description": "Multi-speaker TTS",
+      "tests": [
+        {
+          "test_id": 1,
+          "text": "Hello, this is a demonstration of zero-shot voice cloning technology.",
+          "output_file": "results/vits_output_1.wav",
+          "generation_time": 1.6427724361419678,
+          "voice_similarity": 0.4918372333049774,
+          "quality_metrics": {
+            "duration": 4.702766439909297,
+            "rms_energy": 0.11865879595279694,
+            "zero_crossing_rate": 0.09532548876231527
+          }
+        },
+        {
+          "test_id": 2,
+          "text": "Artificial intelligence can now replicate human voices with remarkable accuracy.",
+          "output_file": "results/vits_output_2.wav",
+          "generation_time": 1.6334631443023682,
+          "voice_similarity": 0.49869969487190247,
+          "quality_metrics": {
+            "duration": 5.387755102040816,
+            "rms_energy": 0.1386536806821823,
+            "zero_crossing_rate": 0.07667063438841201
+          }
+        },
+        {
+          "test_id": 3,
+          "text": "This synthesized speech should sound similar to the reference audio provided.",
+          "output_file": "results/vits_output_3.wav",
+          "generation_time": 1.521122932434082,
+          "voice_similarity": 0.5240813493728638,
+          "quality_metrics": {
+            "duration": 4.818866213151927,
+            "rms_energy": 0.14238204061985016,
+            "zero_crossing_rate": 0.10577157827524039
+          }
+        }
+      ],
+      "statistics": {
+        "avg_similarity": 0.5048727591832479,
+        "std_similarity": 0.013868448543218202,
+        "min_similarity": 0.4918372333049774,
+        "max_similarity": 0.5240813493728638,
+        "avg_generation_time": 1.599119504292806,
+        "total_time": 4.797358512878418
+      }
+    }
+  ]
+}

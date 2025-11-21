@@ -1,0 +1,40 @@
+======================================================================
+INFORME - ZERO-SHOT VOICE CLONING
+======================================================================
+
+AUDIO DE REFERENCIA:
+  • Archivo: audio_samples/reference.wav
+  • Dataset: LibriSpeech (dominio público)
+
+MODELOS EVALUADOS:
+  • XTTS-v2: Zero-shot voice cloning
+  • VITS: Multi-speaker TTS
+
+MÉTRICAS DE SIMILITUD (Resemblyzer):
+  Mide qué tan similar es la voz generada a la voz original
+  Rango: 0.0 (completamente diferente) - 1.0 (idéntico)
+
+RESULTADOS:
+----------------------------------------------------------------------
+Modelo               Similitud       Desv.Std        Tiempo (s)     
+----------------------------------------------------------------------
+XTTS-v2              0.8363          0.0254          9.11           
+VITS                 0.5049          0.0139          1.60           
+----------------------------------------------------------------------
+
+ANÁLISIS:
+
+XTTS-v2 (Zero-Shot Cloning):
+  • Similitud promedio: 0.8363
+  • ✓ Alta similitud - La voz se clonó exitosamente
+  • Tiempo promedio: 9.11s
+
+Comparación XTTS vs VITS:
+  • XTTS tiene 33.15% más similitud
+  • VITS es 5.70x más rápido
+
+CONCLUSIÓN:
+  XTTS-v2 realiza VERDADERO zero-shot voice cloning, clonando
+  la voz del audio de referencia sin entrenamiento previo.
+
+======================================================================
