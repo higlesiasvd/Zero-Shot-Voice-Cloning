@@ -4,7 +4,7 @@ Práctica 3 - TTS Zero-Shot Voice Cloning
 Universidad Intercontinental de la Empresa
 Sistemas Interactivos Inteligentes
 
-VERDADERO ZERO-SHOT VOICE CLONING con XTTS-v2
+ZERO-SHOT VOICE CLONING con XTTS-v2
 """
 
 import os
@@ -132,7 +132,7 @@ def evaluate_quality(audio_path):
             "zero_crossing_rate": float(np.mean(librosa.feature.zero_crossing_rate(audio))),
         }
     except Exception as e:
-        print(f"  ⚠ Error evaluando calidad: {e}")
+        print(f"Error evaluando calidad: {e}")
         return {"duration": 0, "rms_energy": 0, "zero_crossing_rate": 0}
 
 results = {"reference_audio": reference_audio, "models": []}
